@@ -1,0 +1,41 @@
+
+.navbar-nav li
+{
+	padding-left:30px;
+	padding-right:30px;
+	font-size:18px;
+}
+.bg-custom
+{
+	background:#4267B2;
+}
+
+.text-custom{
+	color:#4267B2;
+}
+.gap
+{
+	padding-top:90px;
+	padding-bottom:90px;
+}
+
+.odd
+{
+	background:lightblue;
+}
+
+.sidebar ul li
+{
+   list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100px;
+    background-color: #3BA3EF;
+    height:90px;
+    text-align:center;
+}
+footer
+{
+    background-color:#D729EC
+}
+
