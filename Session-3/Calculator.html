@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<h2>Simple Calculator</h2>
+<div class="row">
+    <input type="text" class="display" id="dis" disabled />
+    <input type="button" class="button" onclick="cl()" value="Cl" id="c" />
+</div>
+
+<div class="row">
+    <div><input type="button" class="button" onclick="display('0')" value="0" /> </div>
+    <div><input type="button" class="button" onclick="display('00')" value="00" /> </div>
+    <div><input type="button" class="button" onclick="display('.')" value="." /> </div>
+    <div><input type="button" class="button" onclick="pow()" value="Pow" /> </div>
+</div>
+
+<div class="row">
+    <div><input type="button" class="button" onclick="display('7')" value="7" /> </div>
+    <div><input type="button" class="button" onclick="display('8')" value="8" /> </div>
+    <div><input type="button" class="button" onclick="display('9')" value="9" /> </div>
+    <div><input type="button" class="button" onclick="display('/')" value="/" /> </div>
+</div>
+<div class="row">
+    <div><input type="button" class="button" onclick="display('4')" value="4" /> </div>
+    <div><input type="button" class="button" onclick="display('5')" value="5" /> </div>
+    <div><input type="button" class="button" onclick="display('6')" value="6" /> </div>
+    <div><input type="button" class="button" onclick="display('*')" value="*" /> </div>
+</div>
+<div class="row">
+    <div><input type="button" class="button" onclick="display('1')" value="1" /> </div>
+    <div><input type="button" class="button" onclick="display('2')" value="2" /> </div>
+    <div><input type="button" class="button" onclick="display('3')" value="3" /> </div>
+    <div><input type="button" class="button" onclick="display('-')" value="-" /> </div>
+</div>
+<div class="row">
+    <div><input type="button" class="button" onclick="display('+')" value="+" /> </div>
+    <div><input type="button" class="button" onclick="display('%')" value="%" /> </div>
+    <div><input type="button" class="button" onclick="del()" value="Del" /> </div>
+    <div><input type="button" class="button" onclick="ans()" value="=" /> </div>
+</div>
+<script src="script/cal.js"></script>
+
+</body>
+</html>
