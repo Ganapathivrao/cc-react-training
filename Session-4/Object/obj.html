@@ -1,0 +1,32 @@
+<html>
+<head>
+</head>
+<body>
+<h1>Go to console for Output!</h1>
+<script>
+function myfunction()
+{
+	let users = [
+	{ 
+	name: "Raksha", 
+	surname: "Sharma",
+	age: 28
+	},
+	{
+	 name: "Srinivas", 
+	 surname: "Iyengar",
+	 age: 30
+	},
+	{ name: "Usha", 
+	surname: "Janardhana", 
+	age: 54 }
+	];
+	const newusers=users.map((value,index) => { return {
+		firstname:value.name+" " + value.surname,
+		id: index+1,
+	} })
+	console.log(newusers);
+	
+}
+myfunction()
+</script>

@@ -1,0 +1,79 @@
+0: Is JavaScript single threaded or multithreaded? What does it mean to be any?
+Javascript is a single threaded language that can be non-blocking. Single threaded means it has only one call stack. Whatever is on the top of the call stack is run first.
+In simple word it executes only one statement at a time.
+
+1: What are promises? Why are they used?
+The Promise object represents the eventual completion (or failure) of an asynchronous operation and its resulting value.
+The Promise constructor takes a function (an executor) that will be executed immediately and passes in two functions: resolve , 
+which must be called when the Promise is resolved , and reject , when it is rejected.
+
+2: What do async/await do? Explain it in your own words.
+Actions that the initiate now ,but complete sometime later.await can be put in front of any async promise-based 
+function to pause your code on that line until the promise fulfills, then return the resulting value .we can use await when calling any function that returns a Promise, 
+including web API functions.await only works inside regular js code.
+
+3:How do we catch errors in async functions?
+In async functions we can catch errors using try/catch blocks.
+
+4:What do async functions return?
+The Async function always return Promise.
+
+5:What do then() consumers in promises return?
+The then() consumers take one argument thats value and it also return a promise.
+
+6.Write the explicit equivalent of Promise.resolve(100);
+let p = new Promise((resolve,reject)=>
+	{
+		resolve(100);
+	});
+p.then();
+
+
+7.What are the states a promise can be in?
+There are 3 state:
+1.Pending
+2.Resolved
+3.Rejected
+
+8: What happens if neither resolve nor reject is called within a promise?
+If it fails to neither resolve nor reject within promise it fails to change state from pending to other.
+
+9: What happens if multiple resolve or reject is called within a promise?
+when multiple resolve or reject is called in promise it take only the first one which taken it should be only executed.
+
+10: What does the finally() method on promise do? Provide your explanation.
+finally() is also one of the consumers.The method finally() called always whethere the promise is fulfilled or rejected.
+
+
+11.What is microtasks in js?
+it works like first-in-first-out(fifo).tasks enque first are run first.
+executtions of the task is initiated only nothing elese is running.
+
+12: Write a simple print() function that accepts a callback, which gets called after 3 seconds. The callback function could be anything that prints out on the screen.
+const print = function(){
+	alert("This msg display after 3 seconds ");
+	}
+setTimeout(print,3000)
+
+13.Delay with promise.
+
+function delay(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+delay(3000).then(() => alert('Should alert after 3 seconds'))
+
+
+14: Consume the following promise using `await`.
+let promise = new Promise((res,rej) => {
+    setTimeout(() => res("Resolved!"),3000)
+} );
+
+let result = await promise;//using await insted of then()
+alert(result);
+
+15: What is the difference between the following two lines of code:
+1.Promise.then(f1).catch(f2) here if error happens in f1 it will handeled by catch.
+2.Promise(f1,f2) but here .then() passes res/error to the next .then/catch. So in the first example, 
+there’s a catch below, and in the second one there isn’t, so the error is unhandled.
+
+

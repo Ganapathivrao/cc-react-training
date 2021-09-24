@@ -1,0 +1,17 @@
+<html>
+<head>
+</head>
+<body>
+<h2>Go to Console for output</h2>
+<script>
+camelize = function camelize(str) {
+      return str.replace(/\W+(.)/g, function(match, chr)
+       {
+            return chr.toUpperCase();
+        });
+    }
+
+console.log(camelize("-webkit-transition"));
+console.log(camelize("list-style-image"));
+</script>
+</body>
