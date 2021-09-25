@@ -5,17 +5,13 @@
 <body>
 <h1>Go to Console for output</h1>
 <script>
-const user = {
- person: { 
- employee: { 
- firstname: "Rahul" 
- }, 
- likes: ["Cycling", "Hiking", "Driving"] 
- } 
- };
-const {firstname.likes}=user;
-console.log(firstname);
-console.log(likes);
+function Destructuring(){
+    const user = {person:{employee:{firstname:"Rahu"},likes:["Cycling","Hiking","Driving"]}};
+    const{person:{employee:{firstname:name}},person:{likes}}=user;
+    return[name,likes[1]];
+}
+var ans = Destructuring();
+console.log(ans);
 </script>
 </body>
 </html>
