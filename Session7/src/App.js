@@ -1,6 +1,7 @@
-import logo from './logo.svg';
-import './App.css';
-import List from './components/List.js';
+import logo from "./logo.svg";
+import "./App.css";
+import List from "./components/List.js";
+import Search from "./components/Search.js";
 
 const info = [
     {
@@ -25,9 +26,10 @@ const info = [
 
 function App() {
   return (
-    <>
+    <div>
+        <Search />
         <List info={info} />
-    </>
+    </div>
   );
 }
 
